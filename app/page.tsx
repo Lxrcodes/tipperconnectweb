@@ -352,7 +352,7 @@ export default function Home() {
               </h2>
               <p className="text-lg text-slate-600 mb-8">
                 We handle the paperwork so you can focus on the work. Every load is documented,
-                every transfer note is generated, and every record is stored for the required 3 years.
+                every transfer note is generated, and every record is stored for the required 2 years.
               </p>
               <ul className="space-y-4">
                 {[
