@@ -180,11 +180,11 @@ export default function Home() {
                 description: 'Accept the quote and watch loads complete in real-time. Digital signatures, weighbridge tickets, full audit trail.',
               },
             ].map((item, i) => (
-              <div key={i} className="relative">
-                <div className="text-7xl font-bold text-slate-300 absolute -top-6 -left-4 select-none pointer-events-none z-10">
+              <div key={i} className="flex flex-col">
+                <div className="text-6xl font-bold text-slate-300 mb-4 select-none">
                   {item.step}
                 </div>
-                <div className="bg-slate-50 rounded-2xl p-8 h-full relative">
+                <div className="bg-slate-50 rounded-2xl p-8 flex-1">
                   <div className="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center mb-6">
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
@@ -231,11 +231,11 @@ export default function Home() {
                 description: 'Every load documented. Compliance tracked. Professional records for every job.',
               },
             ].map((item, i) => (
-              <div key={i} className="relative">
-                <div className="text-7xl font-bold text-slate-600 absolute -top-6 -left-4 select-none pointer-events-none z-10">
+              <div key={i} className="flex flex-col">
+                <div className="text-6xl font-bold text-slate-700 mb-4 select-none">
                   {item.step}
                 </div>
-                <div className="bg-slate-800 rounded-2xl p-8 h-full border border-slate-700 relative">
+                <div className="bg-slate-800 rounded-2xl p-8 flex-1 border border-slate-700">
                   <div className="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center mb-6">
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
