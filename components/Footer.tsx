@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Truck, Mail, Phone, MapPin } from 'lucide-react'
+import { Truck, Mail, MapPin } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -57,12 +57,6 @@ export default function Footer() {
                 <Mail className="w-4 h-4" />
                 <a href="mailto:admin@tipperconnect.co.uk" className="hover:text-white transition-colors">
                   admin@tipperconnect.co.uk
-                </a>
-              </li>
-              <li className="flex items-center gap-2 text-slate-400">
-                <Phone className="w-4 h-4" />
-                <a href="tel:+441234567890" className="hover:text-white transition-colors">
-                  +44 123 456 7890
                 </a>
               </li>
               <li className="flex items-start gap-2 text-slate-400">

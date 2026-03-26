@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Mail, Phone, MapPin, Send, CheckCircle, Building2, Truck, Loader2, AlertCircle } from 'lucide-react'
+import { Mail, MapPin, Send, CheckCircle, Building2, Truck, Loader2, AlertCircle } from 'lucide-react'
 
 // Get your access key from https://web3forms.com/ (free)
 // Enter admin@tipperconnect.co.uk as the email to receive submissions
@@ -11,7 +11,6 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
     company: '',
     type: '',
     message: '',
@@ -37,7 +36,6 @@ export default function ContactPage() {
           from_name: 'TipperConnect Website',
           name: formData.name,
           email: formData.email,
-          phone: formData.phone || 'Not provided',
           company: formData.company || 'Not provided',
           type: formData.type === 'construction' ? 'Construction Company' : 'Haulage Company',
           message: formData.message,
@@ -119,18 +117,6 @@ export default function ContactPage() {
                     <div className="font-medium text-slate-900">Email</div>
                     <a href="mailto:admin@tipperconnect.co.uk" className="text-slate-600 hover:text-orange-600 transition-colors">
                       admin@tipperconnect.co.uk
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center shrink-0">
-                    <Phone className="w-6 h-6 text-orange-600" />
-                  </div>
-                  <div>
-                    <div className="font-medium text-slate-900">Phone</div>
-                    <a href="tel:+441234567890" className="text-slate-600 hover:text-orange-600 transition-colors">
-                      +44 123 456 7890
                     </a>
                   </div>
                 </div>
@@ -221,37 +207,20 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
-                        Phone Number
-                      </label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        disabled={isSubmitting}
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors disabled:bg-slate-100 disabled:cursor-not-allowed"
-                        placeholder="+44 7XXX XXX XXX"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
-                        Company Name
-                      </label>
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        disabled={isSubmitting}
-                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors disabled:bg-slate-100 disabled:cursor-not-allowed"
-                        placeholder="ABC Construction Ltd"
-                      />
-                    </div>
+                  <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
+                      Company Name
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      disabled={isSubmitting}
+                      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors disabled:bg-slate-100 disabled:cursor-not-allowed"
+                      placeholder="ABC Construction Ltd"
+                    />
                   </div>
 
                   <div>
