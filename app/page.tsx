@@ -359,7 +359,7 @@ export default function Home() {
                   'Environment Agency compliant',
                   'Automatic Waste Transfer Note generation',
                   'Waste Carrier Licence verification',
-                  '3-year record retention',
+                  '2-year record retention',
                   'Full audit trail for every load',
                 ].map((item, i) => (
                   <li key={i} className="flex items-center gap-3">
