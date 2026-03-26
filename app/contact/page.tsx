@@ -11,6 +11,7 @@ export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     company: '',
     type: '',
     message: '',
@@ -36,6 +37,7 @@ export default function ContactPage() {
           from_name: 'TipperConnect Website',
           name: formData.name,
           email: formData.email,
+          phone: formData.phone || 'Not provided',
           company: formData.company || 'Not provided',
           type: formData.type === 'construction' ? 'Construction Company' : 'Haulage Company',
           message: formData.message,
@@ -207,20 +209,37 @@ export default function ContactPage() {
                     </div>
                   </div>
 
-                  <div>
-                    <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
-                      Company Name
-                    </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      value={formData.company}
-                      onChange={handleChange}
-                      disabled={isSubmitting}
-                      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors disabled:bg-slate-100 disabled:cursor-not-allowed"
-                      placeholder="ABC Construction Ltd"
-                    />
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
+                        Phone Number (optional)
+                      </label>
+                      <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors disabled:bg-slate-100 disabled:cursor-not-allowed"
+                        placeholder="+44 7XXX XXX XXX"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium text-slate-700 mb-2">
+                        Company Name
+                      </label>
+                      <input
+                        type="text"
+                        id="company"
+                        name="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        disabled={isSubmitting}
+                        className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition-colors disabled:bg-slate-100 disabled:cursor-not-allowed"
+                        placeholder="ABC Construction Ltd"
+                      />
+                    </div>
                   </div>
 
                   <div>
