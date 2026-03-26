@@ -181,10 +181,10 @@ export default function Home() {
               },
             ].map((item, i) => (
               <div key={i} className="relative">
-                <div className="text-6xl font-bold text-slate-200 absolute -top-4 -left-2 z-0 select-none">
+                <div className="text-7xl font-bold text-slate-200 absolute -top-6 -left-4 select-none pointer-events-none">
                   {item.step}
                 </div>
-                <div className="relative bg-slate-50 rounded-2xl p-8 h-full z-10">
+                <div className="bg-slate-50 rounded-2xl p-8 h-full">
                   <div className="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center mb-6">
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
@@ -232,10 +232,10 @@ export default function Home() {
               },
             ].map((item, i) => (
               <div key={i} className="relative">
-                <div className="text-6xl font-bold text-slate-700 absolute -top-4 -left-2 z-0 select-none">
+                <div className="text-7xl font-bold text-slate-700 absolute -top-6 -left-4 select-none pointer-events-none">
                   {item.step}
                 </div>
-                <div className="relative bg-slate-800 rounded-2xl p-8 h-full border border-slate-700 z-10">
+                <div className="bg-slate-800 rounded-2xl p-8 h-full border border-slate-700">
                   <div className="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center mb-6">
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
@@ -381,49 +381,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Simple, Transparent Pricing
-            </h2>
-            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              No monthly fees. No setup costs. Pay only when work gets done.
-            </p>
-          </div>
-
-          <div className="max-w-lg mx-auto">
-            <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 md:p-12 text-white text-center shadow-2xl">
-              <div className="text-orange-400 font-medium mb-2">Commission Model</div>
-              <div className="text-5xl md:text-6xl font-bold mb-2">5%</div>
-              <div className="text-slate-400 mb-8">per completed load</div>
-              <ul className="space-y-4 text-left mb-8">
-                {[
-                  'Free to join',
-                  'No monthly fees',
-                  'No setup costs',
-                  'Unlimited users',
-                  'Full platform access',
-                  'Dedicated support',
-                ].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-orange-500" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/contact"
-                className="block w-full py-4 bg-orange-500 text-white font-bold rounded-xl hover:bg-orange-600 transition-colors"
-              >
-                Get Started
-              </Link>
             </div>
           </div>
         </div>
