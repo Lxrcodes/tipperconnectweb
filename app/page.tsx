@@ -181,10 +181,10 @@ export default function Home() {
               },
             ].map((item, i) => (
               <div key={i} className="relative">
-                <div className="text-7xl font-bold text-slate-200 absolute -top-6 -left-4 select-none pointer-events-none">
+                <div className="text-7xl font-bold text-slate-300 absolute -top-6 -left-4 select-none pointer-events-none z-10">
                   {item.step}
                 </div>
-                <div className="bg-slate-50 rounded-2xl p-8 h-full">
+                <div className="bg-slate-50 rounded-2xl p-8 h-full relative">
                   <div className="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center mb-6">
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
@@ -232,10 +232,10 @@ export default function Home() {
               },
             ].map((item, i) => (
               <div key={i} className="relative">
-                <div className="text-7xl font-bold text-slate-700 absolute -top-6 -left-4 select-none pointer-events-none">
+                <div className="text-7xl font-bold text-slate-600 absolute -top-6 -left-4 select-none pointer-events-none z-10">
                   {item.step}
                 </div>
-                <div className="bg-slate-800 rounded-2xl p-8 h-full border border-slate-700">
+                <div className="bg-slate-800 rounded-2xl p-8 h-full border border-slate-700 relative">
                   <div className="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center mb-6">
                     <item.icon className="w-7 h-7 text-white" />
                   </div>
