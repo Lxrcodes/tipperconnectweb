@@ -414,6 +414,42 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* CheckaTruck Strip */}
+      <section className="py-16" style={{ backgroundColor: '#1e2d45' }}>
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+            <div className="w-14 h-14 bg-orange-500 rounded-xl flex items-center justify-center shrink-0">
+              <ClipboardCheck className="w-7 h-7 text-white" />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <p className="text-slate-400 text-sm">
+                Not ready for the full platform?
+              </p>
+              <p className="font-bold text-white text-xl mt-1">
+                Try CheckaTruck — daily vehicle checks, standalone
+              </p>
+              <p className="text-slate-400 text-sm mt-1">
+                Digital walkaround checks, defect reporting, audit trail.
+                {' '}<span className="text-orange-400 font-semibold">All included free with TipperConnect</span>.
+              </p>
+            </div>
+            <div className="text-center shrink-0">
+              <div className="text-3xl font-bold text-white">70p</div>
+              <div className="text-sm text-slate-400">per vehicle/week</div>
+            </div>
+            <a
+              href="https://checkatruck.co.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-slate-900 font-semibold rounded-xl hover:bg-slate-100 transition-all shrink-0"
+            >
+              Get Started
+              <ArrowRight className="w-4 h-4" />
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
